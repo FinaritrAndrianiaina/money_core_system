@@ -1,0 +1,21 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("/static/img/samsommer-vddccTqwal8-unsplash.jpg");
+}
+
+html input, html label {
+  color: white !important;
+}
+
+html input {
+  border-color: white !important;
+}
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header">
+        <div class="avatar-image center-align">
+            <img src="/static/img/team-4-800x800.jpg" alt="profile_pic" class="circle responsive-img tooltipped"
+                data-position="bottom" data-tooltip="Update profile pic" />
+        </div>
+        <div class="profile-header blue-grey-text">
+            <div>
+                <span class="heading">{{balance}} mCr</span>
+                <span class="description">Argent en comptes</span>
+            </div>
+            <div>
+                <span class="heading">{{adresse}}</span>
+                <span class="description">Adresses</span>
+            </div>
+            <div>
+                <span class="heading">22</span>
+                <span class="description">Transactions</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-content">
+        <form action="/info" method="POST" id="update_account">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s12 m8">
+                    <input disabled type="email" name="email" id="email" value="{{email}}">
+                </div>
+                <div class="input-field col s12 m4">
+                    <label for="id_username">Username</label>
+                    {{ u_form.username }}
+                </div>
+                <div class="col s12 m6">
+                    <label for="telephone">telephone</label>
+                    <input type="tel" name="telephone" id="telephone" value="0327802685" validate>
+                </div>
+                <div class="col s12 m6">
+                    <label for="address">Adresse</label>
+                    <input type="text" name="address" id="address" value="Lot 83 A Ter" validate>
+                </div>
+                <div class="col s12 m6 center-align">
+                    <a class="btn green waves-effect waves-light tooltipped" data-position="bottom"
+                        data-tooltip="Download all address and private key"><i
+                            class="material-icons left">file_download</i>Download detail</a>
+                </div>
+                <div class="col s12 m6 center-align">
+                    <a class="btn blue-grey waves-effect waves-light tooltipped" data-position="bottom"
+                        data-tooltip="Upload address and private key"><i class="material-icons left">publish</i>Upload
+                        address</a>
+                </div>
+                <div class="col s12 center-align">
+                    <button class="btn blue waves-effect waves-light" id="submit_val" disabled=true><i class="material-icons left">mode_edit</i>Appliquer
+                        les modifications</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

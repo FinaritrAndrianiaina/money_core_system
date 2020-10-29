@@ -1,0 +1,60 @@
+<div class="card table">
+    <div class="card-header grey-text right-align">
+    </div>
+    <div class="card-content ">  
+        <table>
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Balance</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody >
+                
+                {% for token in tokens %}    
+                    <tr>
+                        <td class="token-value-{{token.id}}">{{ token }}</td>
+                        <td>{{ token.balance }}</td>
+                        <td>
+                            <a class="btn blue tooltipped waves-effect waves-light modal-trigger address" data-id="{{token.id}}" data-position="bottom"
+                                href="#modal" data-tooltip="Share your address!!"><i
+                                    class="material-icons">share</i></a>
+                            <a class="btn green tooltipped waves-effect waves-light" href="{% url 'save_token' token.id %}" data-position="bottom"
+                                data-tooltip="Download this address and this private key!!!"><i
+                                    class="material-icons">file_download</i></a>
+                            <a class="btn orange tooltipped waves-effect waves-ligh modal-trigger transaction" data-id="{{token.id}}" href="#modal-transaction" data-position="bottom"
+                                data-tooltip="New transaction"><i
+                                    class="material-icons spin">monetization_on</i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!-- Modal Structure -->
+<div id="modal-transaction" class="modal">
+    <div class="modal-header container center-align">
+        <h4>From <span id="token-name"></span></h4>
+    </div>
+    <form id="form-transaction" method="post">
+        {% csrf_token %}
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12 m6 input-field">
+                    <input type="text" name="receiver" placeholder="Entrer ici l'adresse du recepteur" id="id_receiver">
+                    <label for="id_receiver">Receiver token</label>
+                </div>
+                <div class="col s12 m6 input-field">
+                    <input type="number" name="amount" id="id_amount">
+                    <label for="id_amount">amount</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class=" modal-action modal-close waves-effect waves-red btn-flat">Envoyer</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% if messages %}
+            {% for message in messages %}
+            <li>
+                {{message.tags}}
+                <h1>
+                    {{message}}
+                </h1>
+            </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+            
+    <ul>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% endif %}
+    </ul>
+    <ul>
+        {% for token in user.token_set.all %}
+            <li>
+                {{token.token}}
+                <form action="{% url 'new_transaction' token.id %}" method="POST">
+                    {% csrf_token %}
+                    {{form}}
+                    <input type="submit" value="Envoyer">
+                </form>
+            </li>
+        {% endfor %}    
+    </ul>
+    {{ user.id }}
+    <form action="{% url 'new_token' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Soumettre">
+    </form>
+    <button id="btn">Salut</button>
+    <div id="container"></div>
+    <script src="/static/jquery/jquery.min.js" crossorigin></script>
+    <script src="/static/react/react.js" crossorigin></script>
+    <script src="/static/react/react-dom.js" crossorigin></script>
+    <script src="/static/babel/babel.min.js" ></script>
+    <script src="/static/jsx_component/index.jsx" type="text/babel"></script>
+</body>
+</html>

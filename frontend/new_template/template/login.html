@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - D#shbroad</title>
+    <link rel="stylesheet" href="/static/materialize/css/materialize.css">
+    <link rel="stylesheet" href="/static/material-icon/material-icons.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <h1 class="white-text">Welcome!!</h1>
+            </div>
+            <div class="col s12 m6">
+                <div class="card blue">
+                    <div class="card-header center-align container white-text">
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Se connecter sur votre D#shBroad
+                                    </h5>
+                                    <small><a href="/register" class="blue-grey-text">Je n'ai pas de compte</a></small>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-content">
+                        <form method="post" id="form">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col s12 red-text white-text">
+                                    {{form.non_field_errors}}
+                                </div>
+                                <div class="input-field col s12">
+                                    {{ form.username }}
+                                    <label for="id_email" data-error="wrong" data-success="right">Email</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    {{ form.password }}
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="col s12 center-align">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Se connecter
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/materialize/js/materialize.min.js"></script>
+</body>
+</html>

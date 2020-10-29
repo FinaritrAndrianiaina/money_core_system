@@ -1,0 +1,265 @@
+html{
+    body{
+        overflow: hidden;
+        nav{
+            .search-bar{
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+                color: #f4f4f4;
+                input{
+                    color: white;
+                    margin: 8px 5px !important;
+                    border: none !important;
+                    height: unset !important;
+                }
+            }
+            .modal-content{
+                padding: 0 !important;
+                display: block !important;
+                .collection{
+                    border: none !important;
+                    .collection-item{
+                        border: none !important;
+                        color: white;
+                        transition: all ease .3s;
+                        background-color: transparent !important;
+                        &:hover{
+                            color: black;
+                            background-color: #f4f4f4 !important;
+                        }
+                    }
+                }
+            }
+            .dropdown-content{
+                a{
+                    color: black !important;
+                }
+            }
+        }
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        aside{
+            &.sidebar{
+                z-index: 1;
+                position: fixed;
+                overflow: hidden;
+                margin: 0;
+                height: 100%;
+                width: 64px;
+                transition: all ease-out 200ms;
+                ul{
+                    height: 100%;
+                    margin: 0;
+                    .item-sidebar{
+                        cursor: pointer;
+                        display: flex;
+                        min-width: 200px;
+                        a{
+                            margin-right: 32px;
+                            i.material-icons{
+                                font-size: 32px;
+                            }
+                            color: #555555;
+                        }
+                        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 50ms;
+                        &:hover{
+                            background-color: #f4f4f4;
+                        }
+                    }
+                }
+            }
+        }
+        section{
+            &.section{
+                z-index: -1;
+                overflow-y: scroll;
+                padding: 0em;
+                height: 100%;
+                margin-left: 64px;
+                background-image: url('/static/img/samsommer-vddccTqwal8-unsplash.jpg');
+                background-size: cover;
+                background-position-x: center;
+                background-attachment: fixed;
+                .row{
+                    margin: auto;
+                    margin-top: 50px;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap-reverse;
+                    #Table{
+                        .table {
+                            max-height: 600px !important;
+                            overflow-y: scroll;
+
+                            &::-webkit-scrollbar {
+                                width: 5px;
+                                height: 10px;
+                                background-color: transparent;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background-color: transparent;
+                            }
+
+                            &:hover::-webkit-scrollbar-thumb {
+                                background-color: #939393;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    #Info{
+                        .card{
+                            align-items: center;
+                            flex-wrap: wrap-reverse;
+                            min-height: 600px !important;
+                            .card-header{
+                                display: block;
+                                .avatar-image {
+                                    height: 120px;
+                                    img {
+                                        margin: 0;
+                                        transform: translate(0%,-20%);
+                                        left: 50%;
+                                        border: 5px solid white;
+                                        box-shadow: -1px 2px 7px 1px white;
+                                        max-width: 150px;
+                                        transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 500ms 50ms;
+                                        &:hover{
+                                            transform: translate(0%,-33%);
+                                        }
+                                    }
+                                }
+                                .profile-header{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-around;
+                                    span{
+                                        max-width: 90px;
+                                        display: block;
+                                        text-align: center;
+                                        &.description{
+                                            font-weight: bold !important;
+                                        }
+                                    }
+                                }
+                            }
+                            .card-content{
+                                .row{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    .col{
+                                        margin:5px auto !important;
+                                    }
+                                }
+                                margin: 5px;
+                                padding: 0em;
+                            }
+                        }
+                    }
+                }
+            
+                .messages{
+                    .card-content{
+                        padding: 5px 0;
+                        .message{
+                            height: 200px;
+                            overflow-y: scroll;
+                            &::-webkit-scrollbar {
+                                width: 6px;
+                                background-color: transparent;
+                            }
+                            
+                            &::-webkit-scrollbar-thumb {
+                            background-color: transparent;
+                            }
+                            
+                            &:hover::-webkit-scrollbar-thumb {
+                                background-color: #939393;
+                                border-radius: 5px;
+                            }
+                            p{
+                                margin: 1px 0;
+                                cursor: default;
+                                color: white;
+                                padding: 10px;
+                                border-radius: 13px;
+                                max-width: 300px !important;
+                            }
+                    }
+                }
+                    .card-footer{
+                        form{
+                            .row{
+                                display: flex;
+                                .input-field{
+                                    #message{
+                                        overflow-y: scroll;
+                                        max-height: 120px;
+                                        &:focus{
+                                            border-bottom: #03a9f4 !important;
+                                        }
+                                        &::-webkit-scrollbar {
+                                            width: 5px;
+                                            background-color: transparent;
+                                        }
+                                        &::-webkit-scrollbar-thumb {
+                                            background-color: transparent;
+                                        }
+
+                                        &:hover::-webkit-scrollbar-thumb {
+                                            background-color: #aeaeae;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                    padding: 0 8px;
+                                }
+                                .send{
+                                    display: flex;
+                                    align-self: center;
+                                    flex-direction: column;
+                                    button{
+                                        cursor: pointer;
+                                        border: none;
+                                        background-color: transparent;
+                                    }
+                                    .material-icons{
+                                        font-size: 2em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: transparent;
+            }
+
+            &:hover::-webkit-scrollbar-thumb {
+                background-color: #939393;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.brand-logo{
+    font-family: Verdana;
+}
+.spin{
+        animation: spin 5s linear 0s infinite normal;
+}
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,341 @@
+html {
+  height: 100%;
+}
+
+html body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html body nav .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  color: #f4f4f4;
+}
+
+html body nav .search-bar input {
+  color: white;
+  margin: 8px 5px !important;
+  border: none !important;
+  height: unset !important;
+}
+
+html body nav .modal-content {
+  padding: 0 !important;
+  display: block !important;
+}
+
+html body nav .modal-content .collection {
+  border: none !important;
+}
+
+html body nav .modal-content .collection .collection-item {
+  border: none !important;
+  color: white;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  background-color: transparent !important;
+}
+
+html body nav .modal-content .collection .collection-item:hover {
+  color: black;
+  background-color: #f4f4f4 !important;
+}
+
+html body nav .dropdown-content a {
+  color: black !important;
+}
+
+html body aside.sidebar {
+  z-index: 1;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  width: 64px;
+  -webkit-transition: all ease-out 200ms;
+  transition: all ease-out 200ms;
+}
+
+html body aside.sidebar ul {
+  height: 100%;
+  margin: 0;
+}
+
+html body aside.sidebar ul .item-sidebar {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 200px;
+  -webkit-transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 50ms;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 50ms;
+}
+
+html body aside.sidebar ul .item-sidebar a {
+  margin-right: 32px;
+  color: #555555;
+}
+
+html body aside.sidebar ul .item-sidebar a i.material-icons {
+  font-size: 32px;
+}
+
+html body aside.sidebar ul .item-sidebar:hover {
+  background-color: #f4f4f4;
+}
+
+html body section.section {
+  z-index: -1;
+  overflow-y: scroll;
+  padding: 0em;
+  height: 100%;
+  margin-left: 64px;
+  background-image: url("/static/img/samsommer-vddccTqwal8-unsplash.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+html body section.section .row {
+  margin: auto;
+  margin-top: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+html body section.section .row #Table .table {
+  max-height: 600px !important;
+  overflow-y: scroll;
+}
+
+html body section.section .row #Table .table::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color: transparent;
+}
+
+html body section.section .row #Table .table::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+html body section.section .row #Table .table:hover::-webkit-scrollbar-thumb {
+  background-color: #939393;
+  border-radius: 5px;
+}
+
+html body section.section .row #Info .card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  min-height: 600px !important;
+}
+
+html body section.section .row #Info .card .card-header {
+  display: block;
+}
+
+html body section.section .row #Info .card .card-header .avatar-image {
+  height: 120px;
+}
+
+html body section.section .row #Info .card .card-header .avatar-image img {
+  margin: 0;
+  -webkit-transform: translate(0%, -20%);
+          transform: translate(0%, -20%);
+  left: 50%;
+  border: 5px solid white;
+  -webkit-box-shadow: -1px 2px 7px 1px white;
+          box-shadow: -1px 2px 7px 1px white;
+  max-width: 150px;
+  -webkit-transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 500ms 50ms;
+  transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 500ms 50ms;
+}
+
+html body section.section .row #Info .card .card-header .avatar-image img:hover {
+  -webkit-transform: translate(0%, -33%);
+          transform: translate(0%, -33%);
+}
+
+html body section.section .row #Info .card .card-header .profile-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html body section.section .row #Info .card .card-header .profile-header span {
+  max-width: 90px;
+  display: block;
+  text-align: center;
+}
+
+html body section.section .row #Info .card .card-header .profile-header span.description {
+  font-weight: bold !important;
+}
+
+html body section.section .row #Info .card .card-content {
+  margin: 5px;
+  padding: 0em;
+}
+
+html body section.section .row #Info .card .card-content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html body section.section .row #Info .card .card-content .row .col {
+  margin: 5px auto !important;
+}
+
+html body section.section .messages .card-content {
+  padding: 5px 0;
+}
+
+html body section.section .messages .card-content .message {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+html body section.section .messages .card-content .message::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+html body section.section .messages .card-content .message::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+html body section.section .messages .card-content .message:hover::-webkit-scrollbar-thumb {
+  background-color: #939393;
+  border-radius: 5px;
+}
+
+html body section.section .messages .card-content .message p {
+  margin: 1px 0;
+  cursor: default;
+  color: white;
+  padding: 10px;
+  border-radius: 13px;
+  max-width: 300px !important;
+}
+
+html body section.section .messages .card-footer form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body section.section .messages .card-footer form .row .input-field {
+  padding: 0 8px;
+}
+
+html body section.section .messages .card-footer form .row .input-field #message {
+  overflow-y: scroll;
+  max-height: 120px;
+}
+
+html body section.section .messages .card-footer form .row .input-field #message:focus {
+  border-bottom: #03a9f4 !important;
+}
+
+html body section.section .messages .card-footer form .row .input-field #message::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+html body section.section .messages .card-footer form .row .input-field #message::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+html body section.section .messages .card-footer form .row .input-field #message:hover::-webkit-scrollbar-thumb {
+  background-color: #aeaeae;
+  border-radius: 5px;
+}
+
+html body section.section .messages .card-footer form .row .send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body section.section .messages .card-footer form .row .send button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+html body section.section .messages .card-footer form .row .send .material-icons {
+  font-size: 2em;
+}
+
+html body section::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+html body section::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+html body section:hover::-webkit-scrollbar-thumb {
+  background-color: #939393;
+  border-radius: 5px;
+}
+
+.brand-logo {
+  font-family: Verdana;
+}
+
+.spin {
+  -webkit-animation: spin 5s linear 0s infinite normal;
+          animation: spin 5s linear 0s infinite normal;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
